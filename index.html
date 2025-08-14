@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de senha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="register-container">
+      <div id="register-banner">
+        <div id="banner-layer">
+          <h1>Seja Bem-vindo</h1>
+        </div>
+      </div>
+
+      <div id="register-form">
+        <h2>Crie sua conta:</h2>
+        <p>Registre-se para utilizar todas as funcionalidades do sistema</p>
+
+        <div class="form-control">
+          <label for="name">Nome:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Digite seu nome..."
+          />
+        </div>
+
+        <div class="form-control">
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Digite o seu e-mail"
+          />
+        </div>
+
+        <div class="form-control">
+          <label for="password">Senha:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Digite a sua senha"
+          />
+        </div>
+
+        <p>
+          Quer ajuda para criar uma senha segura?
+          <span id="generate-password">Clique aqui</span>.
+        </p>
+        <div id="generate-options">
+          <p>Selecione as opções que você deseja</p>
+          <div id="form-control">
+            <label for="length">Quantidade de caracteres:</label>
+            <input type="text" name="length" id="length" value="10">
+          </div>
+          <div id="form-control">
+            <label for="length">letras:</label>
+            <input type="checkbox" name="letters" id="letters" checked>
+          </div>
+          <div id="form-control">
+            <label for="length">Números:</label>
+            <input type="checkbox" name="numbers" id="numbers" checked>
+          </div>
+          <div id="form-control">
+            <label for="length">símbolos:</label>
+            <input type="checkbox" name="symbols" id="symbols" checked>
+          </div>
+        </div>
+
+        <div id="generated-password" style="display: none">
+          <p>Aqui está a sua senha:</p>
+          <h4></h4>
+          <button id="copy-password" type="button">Copiar</button>
+        </div>
+
+        <div class="form-control">
+          <label for="confirmpassword">Confirme sua senha:</label>
+          <input
+            type="password"
+            name="confirmpassword"
+            id="confirmpassword"
+            placeholder="Confirme sua senha"
+          />
+        </div>
+
+        <input type="submit" value="Cadastrar" />
+      </div>
+
+      <div id="generate-options" class="hide">
+        <h3>Opções de geração de senha</h3>
+        <label>
+          Tamanho:
+          <input type="number" id="length" min="4" max="30" value="12" />
+        </label>
+        <label>
+          <input type="checkbox" id="letters" checked /> Incluir letras
+        </label>
+        <label>
+          <input type="checkbox" id="numbers" checked /> Incluir números
+        </label>
+        <label>
+          <input type="checkbox" id="symbols" checked /> Incluir símbolos
+        </label>
+        <button id="open-generate-password" type="button">
+          Mostrar/Ocultar gerador
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
